@@ -1,0 +1,16 @@
+{% block footer %}
+    <footer class="container" variant="footer">
+        <div class="unit row">
+            <article class="col" variant="col-desktop-4-12">
+                {% include "layout/footer/navigation/bodhitv.nunjucks" %}
+            </article>
+            <article class="col" variant="col-desktop-4-12">
+                {% include "layout/footer/navigation/gebruikers.nunjucks" %}
+                {% include "layout/footer/navigation/social-media.nunjucks" %}
+            </article>
+            <article class="col" variant="col-desktop-4-12">
+                {% include "layout/footer/navigation/sitemap.nunjucks" %}
+            </article>
+        </div>
+    </footer>
+{% endblock %}

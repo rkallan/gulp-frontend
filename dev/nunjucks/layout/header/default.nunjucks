@@ -1,0 +1,16 @@
+{% block header %}
+    <header class="container" variant="header">
+        <div class="unit row" variant="header-black">
+            <div class="col" variant="col-desktop-3-12">
+                <figure class="logo-bodhitv">
+                    <a href="#" title="Logo bodhitv boeddha op gympies">
+                        <img src="/resources/images/logo-bodhitv-boeddha-op-gympies.png" />
+                    </a>
+                </figure>
+            </div>
+
+            {% include "layout/header/head-menu/default.nunjucks" %}
+            {% include "layout/header/secondary-menu/default.nunjucks" %}
+        </div>
+    </header>
+{% endblock %}

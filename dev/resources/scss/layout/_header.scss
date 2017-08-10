@@ -1,0 +1,31 @@
+.container {
+	&[variant*="header"] {
+		@include setPropWithRemAndPx(83, (height, max-height));
+		@extend %clearfix;
+		
+		.unit {
+			@include setPropWithRemAndPx(82, (height: 83, max-height: 83, border-bottom-left-radius: $borderRadius, border-bottom-right-radius: $borderRadius, width: map-get($grid, maxRowWidth)));
+			margin: 0 auto;
+			overflow: hidden;
+			
+			&[variant="header-black"] {
+				background: -webkit-linear-gradient(top, rgb(93, 93, 93) 0%, rgb(33, 33, 34) 97%, rgb(33, 33, 34) 99%, rgb(166, 166, 166) 100%);
+				background: -o-linear-gradient(top, rgb(93, 93, 93) 0%, rgb(33, 33, 34) 97%, rgb(33, 33, 34) 99%, rgb(166, 166, 166) 100%);
+				background: -ms-linear-gradient(top, rgb(93, 93, 93) 0%, rgb(33, 33, 34) 97%, rgb(33, 33, 34) 99%, rgb(166, 166, 166) 100%);
+				background: -moz-linear-gradient(top, rgb(93, 93, 93) 0%, rgb(33, 33, 34) 97%, rgb(33, 33, 34) 99%, rgb(166, 166, 166) 100%);
+				background: linear-gradient(to bottom, rgb(93, 93, 93) 0%, rgb(33, 33, 34) 97%, rgb(33, 33, 34) 99%, rgb(166, 166, 166) 100%);
+			}
+			
+			.logo-bodhitv {
+				a {
+					display: block;
+				}
+				img {
+					width: 100%;
+					max-width: 100%;
+					@include setPropWithRemAndPx(83, (height, max-height));
+				}
+			}
+		}
+	}
+}

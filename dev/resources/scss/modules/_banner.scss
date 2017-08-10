@@ -1,0 +1,51 @@
+.container {
+	&[variant*="banner"] {
+		.unit {
+			@include setPropWithRemAndPx($borderRadius, (border-top-left-radius: $borderRadius, border-top-right-radius: $borderRadius));
+			overflow: hidden;
+			
+			h1 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				color: $color-white;
+				font-weight: bold;
+				background: $color-grey-transparent;
+				@include setPropWithRemAndPx(40, (line-height: 40, font-size: map-get($heading, h1), padding-left: map-get($grid, gutter), padding-right: map-get($grid, gutter)));
+				box-sizing: border-box;
+				
+				span {
+					display: inline-block;
+					@include setPropWithRemAndPx(40, (line-height: 30, margin-top: 8));
+				}
+			}
+			
+			.intro {
+				position: absolute;
+				background: $color-grey-transparent;
+				margin: 0;
+				@include setPropWithRemAndPx(map-get($grid, gutter), (right, bottom));
+				
+				p {
+					color: $color-white;
+					@include setPropWithRemAndPx(10, (padding: 10, font-size: 14, line-height: 21));
+					
+					a {
+						color: $color-white;
+						
+						&:hover, &:focus{
+							text-decoration: none;
+						}
+					}
+				}
+			}
+			
+			img {
+				width: 100%;
+			}
+		}
+	}
+}
+
+

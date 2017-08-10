@@ -1,0 +1,11 @@
+<nav class="col" variant="account-menu pos-right">
+    <ul>
+        {% for menuAccount in header.menuAccount %}
+            <li>
+                <a href="{{ menuAccount.href }}" title="">
+                    {{ menuAccount.title }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

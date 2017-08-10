@@ -1,0 +1,13 @@
+%clearfix {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+// Use the mixins as follow
+//
+// .container-with-floated-children {
+//  @extend %clearfix;
+// }

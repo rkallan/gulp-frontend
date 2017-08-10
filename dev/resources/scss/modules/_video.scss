@@ -1,0 +1,31 @@
+.container {
+	&[variant*="overview-video"] {
+		.unit {
+			@include setPropWithRemAndPx(20, (margin-bottom: map-get($grid, gutter)));
+			a {
+				display: block;
+				font-family: $fontFamilyHeadings;
+				font-weight: bold;
+				color: $color-yellow;
+				text-decoration: none;
+				border-bottom: calculateRem(2px) solid $color-yellow;
+				@include setPropWithRemAndPx(5, (padding-bottom: 5, font-size: map-get($heading, h1), margin-bottom: map-get($grid, gutter)));
+				
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
+			}
+			
+			.video {
+				@include setPropWithRemAndPx(20, (margin-bottom: map-get($grid, gutter)));
+				
+				iframe {
+					width: 100%;
+					max-width: 100%;
+					height: auto;
+					max-height: 100%;
+				}
+			}
+		}
+	}
+}

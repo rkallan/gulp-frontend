@@ -1,0 +1,17 @@
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	-ms-transition: $args;
+	-o-transition: $args;
+	transition: $args;
+}
+
+// Use the mixins as follow
+//
+// a {
+//  color: gray;
+//  @include transition(color .3s ease);
+//  &:hover {
+//    color: black;
+//  }
+// }

@@ -1,0 +1,30 @@
+{% extends "layout/default.nunjucks" %}
+
+{% block main %}
+<main class="container" variant="main">
+
+    {% include "modules/banner/default.nunjucks" %}
+
+    <div class="container" variant="content">
+        <div class="unit row">
+            <article class="col" variant="col-desktop-6-12">
+                {% include "modules/overview-list/video-large.nunjucks" %}
+
+                {% include "modules/overview-list/video.nunjucks" %}
+            </article>
+
+
+            <article class="col" variant="col-desktop-3-12">
+                {% include "modules/overview-list/artikelen.nunjucks" %}
+            </article>
+
+            <article class="col" variant="col-desktop-3-12 pos-right">
+                {% include "modules/overview-list/nieuws.nunjucks" %}
+                {% include "modules/overview-list/agenda.nunjucks" %}
+                {% include "modules/newsletter/default.nunjucks" %}
+            </article>
+        </div>
+    </div>
+
+</main>
+{% endblock %}

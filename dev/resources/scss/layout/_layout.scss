@@ -1,0 +1,112 @@
+html {
+	font-family: $fontFamily;
+	font-size: #{$docFontSize};
+	line-height: 1.5;
+	color: $color-grey;
+}
+
+body {
+	line-height: 1.5;
+	@include setPropWithRemAndPx(map-get($grid, gutter)*2, margin-bottom);
+	
+	&[accessibility*="mouse"] {
+		:focus{
+			outline:0
+		}
+	}
+}
+
+h1 {
+	font-family: $fontFamilyHeadings;
+	font-size: map-get($heading, h1);
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+h2 {
+	font-family: $fontFamilyHeadings;
+	font-size: map-get($heading, h2);
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+h3{
+	font-family: $fontFamilyHeadings;
+	font-size: map-get($heading, h3);
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+h4 {
+	font-family: $fontFamilyHeadings;
+	font-size: map-get($heading, h4);
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+h5 {
+	font-family: $fontFamilyHeadings;
+	font-size: map-get($heading, h5);
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+h6 {
+	font-family: $fontFamilyHeadings;
+	font-size: map-get($heading, h6);
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	@include setPropWithRemAndPx(map-get($grid, gutter), margin-bottom);
+	
+	@extend %clearfix;
+	
+	&[variant*='content'] {
+		.unit {
+			&.row {
+				box-sizing: border-box;
+				@include setPropWithRemAndPx(map-get($grid, gutter), (padding-left, padding-right));
+			}
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.row {
+	.col {
+		&[variant*='pos-right'] {
+			float: right;
+		}
+	}
+}
+
+[state*="hidden"] {
+	@include opacity(0);
+	@extend  %visuallyhidden;
+}
+
+[state*="active"] {
+	@include opacity(1);
+	@extend  %visuallyShow;
+}
+
+label {
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+}
+
+

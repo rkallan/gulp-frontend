@@ -1,0 +1,18 @@
+<article class="container" variant="banner">
+    {% for banner in banners.general %}
+    <section class="unit row">
+       <h1>
+           <span>
+               {{ banner.title }}
+           </span>
+       </h1>
+        <div class="intro col" variant="col-desktop-4-12">
+            <p>{{ banner.intro | striptags }} <a href="{{ banner.href }}">Lees meer »</a></p>
+        </div>
+
+        <figure>
+            <img src="/resources/images/banner/{{ banner.image }}">
+        </figure>
+    </section>
+    {% endfor %}
+</article>

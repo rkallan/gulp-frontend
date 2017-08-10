@@ -1,0 +1,3 @@
+{
+	"default": ["browser-sync", "watch", "copy:images", "css:compile", "concatJs:build", "nunjucksRender:compile"]
+}

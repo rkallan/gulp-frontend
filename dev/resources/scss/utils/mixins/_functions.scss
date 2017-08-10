@@ -1,0 +1,21 @@
+@function setUnitToPx($value) {
+	@if unitless($value) {
+		@return $value * 1px;
+	}
+}
+
+@function calculateRem($size, $docFontSize: 16px) {
+	@if unitless($size) {
+		$size: setUnitToPx($size);
+	}
+	
+	@if unitless($docFontSize) {
+		$docFontSize: setUnitToPx($docFontSize)
+	}
+	
+	@if unit($size) == 'px' and unit($docFontSize) == 'px' {
+		@return ($size / $docFontSize) * 1rem;
+	} @else {
+		@warn 'Check if the propities are pixels or unitless'
+	}
+}

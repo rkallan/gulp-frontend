@@ -1,0 +1,68 @@
+.container {
+	&[variant*='footer'] {
+		@include setPropWithRemAndPx(map-get($grid, gutter)*2, (margin-top));
+		.unit {
+			@include setPropWithRemAndPx(map-get($grid, gutter), (margin-bottom));
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.row {
+				@include setPropWithRemAndPx(map-get($grid, gutter), (padding-top));
+				border-top: 1px solid $color-grey;
+				border-top: calculateRem(1px) solid $color-grey;
+				@include setPropWithRemAndPx(map-get($grid, gutter), (padding-left, padding-right));
+			}
+			
+			h3 {
+				@include setPropWithRemAndPx(map-get($grid, gutter) / 2, (margin-bottom));
+			}
+			
+			nav {
+				ul {
+					li {
+						a {
+							display: block;
+							color: $color-grey;
+							border-bottom: calculateRem(1px) solid $color-grey;
+							text-decoration: none;
+							@include setPropWithRemAndPx(30, (line-height: 30, font-size: 14));
+							
+							&:hover, &:focus {
+								text-decoration: underline;
+							}
+						}
+					}
+				}
+			}
+			
+			&[variant*="list-horizontale"] {
+				nav {
+					ul {
+						li {
+							float: left;
+							@include setPropWithRemAndPx(10, (margin-left, margin-right));
+							
+							&:first-child {
+								margin-left: 0;
+							}
+							
+							&:last-child {
+								margin-right: 0;
+							}
+							
+							a {
+								display: block;
+								@include setPropWithRemAndPx(5, (width: 25, max-width: 25, line-height: 25));
+								border: 0;
+								svg {
+									width: 100%;
+									height: 100%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

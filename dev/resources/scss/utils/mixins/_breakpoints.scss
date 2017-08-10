@@ -1,0 +1,25 @@
+@mixin addBreakpointFor($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		$breakpointProp: map-get($breakpoints, $breakpoint);
+		$minWidth: map-get($breakpointProp, min-width);
+		$maxWidth: map-get($breakpointProp, max-width);
+		
+		$mediaQuery: '';
+		
+		@each $propety, $value in $breakpointProp {
+			@if $value != null {
+				$mediaQuery: $mediaQuery + ' and (' + $propety + ': ' + $value + ')'
+			}
+		}
+		
+		@if $mediaQuery != '' {
+			@media screen #{$mediaQuery} {
+				@content;
+			}
+		} @else {
+			@warn 'The breakpoint has no propities, or the values are null. The mediaquery will not added to your css'
+		}
+	} @else {
+		@error $breakpoint + ' does not excist! Create a new breakpoint or use an existing breakpoint';
+	}
+}

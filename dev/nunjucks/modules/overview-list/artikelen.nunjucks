@@ -1,0 +1,32 @@
+<article class="container" variant="overview-list color-blue">
+    <section class="unit">
+        <h1>Artikelen</h1>
+    </section>
+    <section class="unit">
+        <a href=""><span class="date">13-06</span> <span class="title">Buddha Bites: Formatie 2017</span></a>
+        <div class="content">
+            <figure>
+                <img src="/resources/images/nieuws/thumb1.png" />
+            </figure>
+
+            <p>
+                Wat kan het boeddhisme betekenen voor de kabinetsformatie? Met die vraag waagt Misha Beliën zich op het Binnenhof, waar hij Buma, Rutte, Pechtold en Klaver aan de mouw trekt.
+            </p>
+        </div>
+    </section>
+    <section class="unit">
+        <a href=""><span class="date">13-06</span> <span class="title">Buddha Bites: Formatie 2017</span></a>
+        <div class="content">
+            <figure>
+                <img src="/resources/images/nieuws/thumb1.png" />
+            </figure>
+
+            <p>
+                Wat kan het boeddhisme betekenen voor de kabinetsformatie? Met die vraag waagt Misha Beliën zich op het Binnenhof, waar hij Buma, Rutte, Pechtold en Klaver aan de mouw trekt.
+            </p>
+        </div>
+    </section>
+    <section class="unit" variant="read-more">
+        <a href="#">Meer artikelen</a>
+    </section>
+</article>

@@ -1,0 +1,21 @@
+<article class="container" variant="overview-video">
+    <section class="unit">
+        <a href="#">Ontspannen op vakantie?</a>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/wT-qXQ48aN8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="intro">
+            <p>Je kent het: inpakstress, paspoort vergeten, het vliegveld is een hel. Hoe ga je in hemelsnaam ontspannen op vakantie? Misha Beliën vraagt het reizigers, en 'stressontknoper' en zenboeddhist Paul Loomans.</p>
+        </div>
+    </section>
+
+    <section class="unit">
+        <a href="#">Ontspannen op vakantie?</a>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/wT-qXQ48aN8?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="intro">
+            <p>Je kent het: inpakstress, paspoort vergeten, het vliegveld is een hel. Hoe ga je in hemelsnaam ontspannen op vakantie? Misha Beliën vraagt het reizigers, en 'stressontknoper' en zenboeddhist Paul Loomans.</p>
+        </div>
+    </section>
+</article>

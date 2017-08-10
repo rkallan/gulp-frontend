@@ -1,0 +1,22 @@
+$breakpoints: (
+	mobile: (
+		min-width: null,
+		max-width: calculateRem(320px)
+	),
+	tablet: (
+		min-width: null,
+		max-width: calculateRem(640px)
+	),
+	desktop-small: (
+		min-width: null,
+		max-width: calculateRem(920px)
+	),
+	desktop: (
+		min-width: null,
+		max-width: calculateRem(1200px)
+	),
+	desktop-large: (
+		min-width: calculateRem(1400px),
+		max-width: null
+	)
+)

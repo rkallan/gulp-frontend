@@ -1,0 +1,14 @@
+<article class="container" variant="overview-list color-green">
+    <section class="unit">
+        <h1>Nieuws</h1>
+    </section>
+    <section class="unit">
+        <a href=""><span class="date">13-06</span> <span class="title">Buddha Bites: Formatie 2017</span></a>
+    </section>
+    <section class="unit">
+        <a href=""><span class="date">13-06</span> <span class="title">Buddha Bites: Formatie 2017</span></a>
+    </section>
+    <section class="unit" variant="read-more">
+        <a href="#">Meer nieuws</a>
+    </section>
+</article>

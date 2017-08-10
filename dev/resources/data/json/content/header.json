@@ -1,0 +1,48 @@
+{
+	"menu": [{
+		"title": "Video's",
+		"href": "#",
+		"titleTag": "",
+		"hoverStyle": "yellow"
+	},{
+		"title": "Artikelen",
+		"href": "#",
+		"titleTag": "",
+		"hoverStyle": "blue"
+	},{
+		"title": "Nieuws",
+		"href": "#'",
+		"titleTag": "",
+		"hoverStyle": "green"
+	},{
+		"title": "Agenda",
+		"href": "#",
+		"titleTag": "",
+		"hoverStyle": "red"
+	},{
+		"title": "Algemeen",
+		"href": "#",
+		"titleTag": "",
+		"hoverStyle": "red"
+	}],
+	"menuAccount": [{
+		"title": "Home",
+		"href": "#"
+	},{
+		"title": "Zoeken",
+		"href": "#"
+	},{
+		"title": "Login",
+		"href": "#"
+	},{
+		"title": "Creëer een account",
+		"href": "#"
+	}],
+	"socialMedia": [{
+		"title": "Facebook",
+		"href": "#"
+	},{
+		"title": "Twitter",
+		"href": "#"
+	}]
+}

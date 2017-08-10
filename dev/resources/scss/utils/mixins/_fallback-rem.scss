@@ -1,0 +1,33 @@
+@mixin setPropWithRemAndPx($size, $properties) {
+	@if unitless($size) {
+		$size: setUnitToPx($size);
+	}
+	
+	@if type-of($properties) != map and $properties != "" {
+		$properties: (
+			$properties
+		);
+	}
+	
+	$rmSize: calculateRem($size);
+	$rmSizeDefault: $rmSize;
+	$sizeDefault: $size;
+	
+	@each $property, $val in $properties {
+		@if $val != null and $val != '' {
+			@if unitless($val) {
+				$val: setUnitToPx($val);
+			}
+			@if unit($val) == 'px' and $val != $size {
+				$size: $val;
+				$rmSize: calculateRem($val);
+			}
+		} @elseif $rmSize != $rmSizeDefault {
+			$size: $sizeDefault;
+			$rmSize: $rmSizeDefault;
+		}
+
+		#{$property}: $size;
+		#{$property}: $rmSize;
+	}
+}

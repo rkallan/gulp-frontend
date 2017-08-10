@@ -1,0 +1,11 @@
+<nav class="col" variant="head-menu pos-right">
+    <ul>
+        {% for headMenu in header.menu %}
+            <li>
+                <a href="{{ headMenu.href }}" title="{{ headMenu.titleTag }}" variant="hover-{{ headMenu.hoverStyle }}">
+                    <span>{{ headMenu.title }}</span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>

@@ -1,0 +1,41 @@
+.container {
+	&[variant*="custom-form"] {
+		[variant*="error-message"] {
+			color: $color-red;
+			background-repeat: no-repeat;
+			@include setPropWithRemAndPx(30, (padding-left: 30, background-size: 24, margin-bottom: map-get($grid, gutter)/2, font-size: $bodyTextFontSize, line-height: 24));
+			@include background-image('icons/error');
+			@include transition(opacity 0.6s linear 0s, height 0.4s, overflow 0.5s);
+		}
+		
+		.form-label {
+			@include setPropWithRemAndPx(map-get($grid, gutter)/2, (margin-bottom: map-get($grid, gutter)/2, font-size: $bodyTextFontSize));
+		}
+		
+		.form-input{
+			@include setPropWithRemAndPx(map-get($grid, gutter)/2, margin-bottom);
+		}
+		
+		.input {
+			text-align: left;
+			@include setPropWithRemAndPx(20, (padding: 10, border-radius: $borderRadius/2, height: 30));
+			background: #fff;
+			border: solid 1px $color-grey;
+			color: $color-grey;
+			width: 100%;
+			@include transition(background-color .4s ease, border .4s ease, color .4s ease);
+			box-sizing: border-box;
+			
+			@include placeholder($color-grey);
+			
+			&[state*="invalid"] {
+				color: $color-white;
+				background-color: $color-red;
+				
+				@include placeholder($color-white);
+			}
+			
+
+		}
+	}
+}

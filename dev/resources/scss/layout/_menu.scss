@@ -1,0 +1,103 @@
+[variant*="head-menu"] {
+	position: absolute;
+	bottom: 0;
+	@include setPropWithRemAndPx(map-get($grid, gutter)*5, (left));
+	
+	&[variant*="pos-right"] {
+		float: right;
+		left: auto;
+		@include setPropWithRemAndPx(map-get($grid, gutter)*5,  (right));
+		
+		ul {
+			float: right;
+		}
+	}
+	
+	ul {
+		li {
+			float: left;
+			a {
+				position: relative;
+				display: block;
+				color: $color-white;
+				@include setPropWithRemAndPx(18, (font-size: 18, line-height: 36, padding-left: 5, padding-right: 5));
+				text-align: center;
+				text-decoration: none;
+				z-index: 5;
+				
+				span {
+					display: inline-block;
+					position: relative;
+					background: $color-white-transparent;
+					@include setPropWithRemAndPx(10, (padding-left: 15, padding-right: 15, border-top-left-radius: $borderRadius, border-top-right-radius: $borderRadius));
+				}
+	
+				&:hover, &:focus {
+					color: $color-grey;
+					span {
+						background: $color-white;
+					}
+				}
+				
+				&[variant*="hover-yellow"] {
+					&:hover,&:focus {
+						color: $color-yellow;
+					}
+				}
+				&[variant*="hover-blue"] {
+					&:hover, &:focus {
+						color: $color-blue;
+					}
+				}
+				&[variant*="hover-green"] {
+					&:hover, &:focus {
+						color: $color-green;
+					}
+				}
+				&[variant*="hover-red"] {
+					&:hover, &:focus {
+						color: $color-red;
+					}
+				}
+			}
+		}
+	}
+}
+
+[variant*="account-menu"] {
+	position: absolute;
+	@include setPropWithRemAndPx(map-get($grid, gutter), (left: map-get($grid, gutter)*5, top: map-get($grid, gutter) / 2 ));
+	
+	&[variant*="pos-right"] {
+		float: right;
+		left: auto;
+		@include setPropWithRemAndPx(map-get($grid, gutter)*5, (right));
+		
+		ul {
+			float: right;
+		}
+	}
+	
+	ul {
+		li {
+			float: left;
+			a {
+				@include setPropWithRemAndPx($bodyTextFontSize, (font-size: $bodyTextFontSize, line-height: 18, padding-left: 4, padding-right: 4));
+				color: $color-white;
+				border-left: 1px solid $color-white;
+				border-left: calculateRem(1.5) solid $color-white;
+				
+				&:hover, &:hover, &:focus {
+					text-decoration: none;
+				}
+			}
+			
+			&:nth-child(1) {
+				a {
+					border: 0;
+				}
+			}
+		}
+		
+	}
+}

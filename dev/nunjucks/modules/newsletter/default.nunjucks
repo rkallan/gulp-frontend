@@ -1,0 +1,21 @@
+<article class="container" variant="custom-form">
+    <form class="form" action="http://localhost:3000/html/test.html" method="POST" name="newsletter" novalidate>
+        <section class="unit" variant="error-message" state="hidden">
+            <p>U heeft geen juist emailadres ingevuld.</p>
+        </section>
+        <section class="unit">
+            <div class="form-label">
+                <label for="email">Emailadres</label>
+            </div>
+            <div class="form-input">
+                <input class="input" id="email" variant="email" type="email" name="email" placeholder="E-mail address*" data-required="true" state />
+            </div>
+        </section>
+
+        <section class="unit">
+            <button type="submit" class="submit-button" id="button-submit" variant="color-blue">
+                <span class="multiplelines">Inschrijven</span>
+            </button>
+        </section>
+    </form>
+</article>

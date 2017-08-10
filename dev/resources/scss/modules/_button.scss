@@ -1,0 +1,24 @@
+.submit-button {
+	display: inline-block;
+	@include setPropWithRemAndPx(map-get($grid, gutter), (line-height: map-get($grid, gutter)*1.5, min-height: map-get($grid, gutter)*1.5, border-radius: $borderRadius/2, padding-left: map-get($grid, gutter)/2, padding-right: map-get($grid, gutter)/2));
+	text-align: center;
+	background-clip: padding-box;
+	box-shadow: inset 0 0 0 0 $color-white;
+	box-sizing: border-box;
+	color: $color-white;
+	background-color: $color-grey;
+	border-color: transparent;
+	transition: background-color .5s, color .1s, box-shadow 0.4s, filter 0.4s;
+	
+	&:hover, &:focus {
+		background-color: lighten($color-grey, 20%);
+	}
+	
+	&[variant*="color-blue"] {
+		background-color: $color-blue;
+		
+		&:hover, &:focus {
+			background-color: lighten($color-blue, 20%);
+		}
+	}
+}

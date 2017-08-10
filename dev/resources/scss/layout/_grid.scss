@@ -1,0 +1,12 @@
+.row {
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	@include setPropWithRemAndPx(map-get($grid, maxRowWidth), max-width);
+	@extend %clearfix;
+	
+	.col {
+		@include grid(map-get($grid, cols), map-get($grid, gutter), $breakpoints);
+	}
+}
+

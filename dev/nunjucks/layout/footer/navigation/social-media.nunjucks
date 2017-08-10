@@ -1,0 +1,17 @@
+<section class="unit" variant="list-horizontale">
+    <h3>Social media</h3>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    {% include "layout/footer/svg/facebook.svg" %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% include "layout/footer/svg/twitter.svg" %}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</section>

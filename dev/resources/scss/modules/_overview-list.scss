@@ -1,0 +1,114 @@
+.container {
+	&[variant*="overview-list"] {
+		.unit {
+			@include setPropWithRemAndPx(20, (margin-bottom: map-get($grid, gutter)));
+			h1 {
+				display: block;
+				font-family: $fontFamilyHeadings;
+				font-weight: bold;
+				border-bottom: calculateRem(2px) solid $color-grey;
+				@include setPropWithRemAndPx(5, (padding-bottom: 5, font-size: map-get($heading, h1)));
+			}
+			
+			a {
+				display: block;
+				font-family: $fontFamilyHeadings;
+				font-weight: bold;
+				color: $color-grey;
+				text-decoration: none;
+				@include setPropWithRemAndPx(20, (font-size: map-get($heading, h2), margin-bottom: 5));
+				
+				.date {
+					color: $color-grey;
+					font-weight: normal;
+					@include setPropWithRemAndPx(14, (font-size: 14));
+				}
+				
+				.title {
+				
+				}
+				
+				&:hover, &:focus {
+					.title {
+						text-decoration: underline;
+					}
+				}
+			}
+			
+			.content {
+				@include setPropWithRemAndPx(20, (font-size: 14));
+				
+				figure {
+					float: left;
+					@include setPropWithRemAndPx(20, (margin-right: 10, margin-top: 5, margin-bottom: 5));
+				}
+			}
+			
+			&[variant*="read-more"] {
+				a {
+					display: block;
+					text-align: right;
+					text-decoration: underline;
+					margin: 0;
+					@include setPropWithRemAndPx(16, (font-size: map-get($heading, h1)));
+					
+					&:hover, &:focus {
+						text-decoration: none;
+					}
+					&:after {
+						content: ' » ';
+					}
+				}
+			}
+		}
+		
+		&[variant*="color-yellow"] {
+			.unit {
+				h1 {
+					color: $color-yellow;
+					border-color: $color-yellow;
+				}
+				
+				a {
+					color: $color-yellow;
+				}
+			}
+		}
+		&[variant*="color-blue"] {
+			.unit {
+				h1 {
+					color: $color-blue;
+					border-color: $color-blue;
+				}
+				
+				a {
+					color: $color-blue;
+				}
+			}
+		}
+		&[variant*="color-green"] {
+			.unit {
+				h1 {
+					color: $color-green;
+					border-color: $color-green;
+				}
+				
+				a {
+					color: $color-green;
+				}
+			}
+		}
+		&[variant*="color-red"] {
+			.unit {
+				h1 {
+					color: $color-red;
+					border-color: $color-red;
+				}
+				
+				a {
+					color: $color-red;
+				}
+			}
+		}
+	}
+}

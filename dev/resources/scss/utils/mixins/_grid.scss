@@ -1,0 +1,32 @@
+@mixin grid($cols, $gutter, $breakpoints) {
+	$gutter: calculateRem($gutter);
+	$totalGutters: $gutter * $cols - $gutter;
+	
+	@if type-of($breakpoints) == string and $breakpoints != '' {
+		$breakpoints: (
+			$breakpoints
+		);
+	} @else if type-of($breakpoints) != map and type-of($breakpoints) != list  {
+		@error $breakpoints ' There is no given breakpoint. Add the breakpoint object or a single value'
+	}
+	
+	@each $breakpoint, $prop in $breakpoints {
+		@for $counter from 1 through $cols {
+			$extraWidth: ($counter - 1) * $gutter;
+			&[variant*='col-#{$breakpoint}-#{$counter}-#{$cols}'] {
+				float: left;
+				width: calc((100% - #{$totalGutters}) / #{$cols} * #{$counter} + #{$extraWidth});
+				margin-left: $gutter / 2;
+				margin-right: $gutter / 2;
+			}
+		}
+	}
+	
+	&:nth-child(1) {
+		margin-left: 0;
+	}
+	
+	&:nth-last-child(1) {
+		margin-right: 0;
+	}
+}
