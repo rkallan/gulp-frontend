@@ -25,6 +25,5 @@
             </article>
         </div>
     </div>
-
 </main>
 {% endblock %}
